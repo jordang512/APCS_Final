@@ -4,7 +4,7 @@ package nethackPackage;
  * Purpose: This class can create Armor.
  * @author Isaac Pugh
  * @dateCreated April 8, 2015
- * @dateModified April 8, 2015
+ * @dateModified April 16, 2015
  */
 public class Armor extends Item {
 
@@ -12,9 +12,9 @@ public class Armor extends Item {
 	
 	/**
 	 * Parameterized Constructor
-	 * @param itemName
-	 * @param weight
-	 * @param defense
+	 * @param itemName is a String that holds the name of the Armor.
+	 * @param weight is a double that holds the weight of the Armor.
+	 * @param defense is an int that shows how much the Armor defends from attacks.
 	 */
 	public Armor(String itemName, double weight, int defense) {
 		super(itemName, weight);
@@ -27,7 +27,10 @@ public class Armor extends Item {
 	public Armor() {
 		
 	}
-
+	
+	/**
+	 * Getters and Setters
+	 */
 	public int getDefense() {
 		return defense;
 	}

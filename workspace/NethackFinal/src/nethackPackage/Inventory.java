@@ -6,7 +6,7 @@ import java.util.*;
  * Purpose: This class holds an entity's items.
  * @author Isaac Pugh
  * @dateCreated April 7, 2015
- * @dateModified April 7, 2015
+ * @dateModified April 16, 2015
  */
 public class Inventory {
 	
@@ -14,7 +14,7 @@ public class Inventory {
 	
 	/**
 	 * Parameterized Constructor
-	 * @param inventory
+	 * @param inventory is an ArrayList of Item that holds items.
 	 */
 	public Inventory(ArrayList<Item> inventory) {
 		this.inventory = inventory;
@@ -24,7 +24,14 @@ public class Inventory {
 	 * Unparameterized Constructor
 	 */
 	public Inventory() {
-		
+		inventory = new ArrayList<Item>();
+	}
+	
+	public double getTotalWeight() {
+		int totalWeight = 0;
+		for (int i = 0; i < inventory.size(); i++)
+			totalWeight += inventory.get(i).getWeight();
+		return totalWeight;
 	}
 	
 	/**

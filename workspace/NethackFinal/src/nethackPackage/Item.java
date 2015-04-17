@@ -4,7 +4,7 @@ package nethackPackage;
  * Purpose: This class is every item in the game: weapons, food, unicorn horns, etc.
  * @author Isaac Pugh
  * @dateCreated April 7, 2015
- * @dateModified April 7, 2015
+ * @dateModified April 16, 2015
  */
 public class Item {
 
@@ -13,8 +13,8 @@ public class Item {
 	
 	/**
 	 * Parameterized Constructor
-	 * @param itemName
-	 * @param weight
+	 * @param itemName is a String that holds the name of the Item.
+	 * @param weight is a double that holds the weight of the Item.
 	 */
 	public Item(String itemName, double weight) {
 		this.itemName = itemName;

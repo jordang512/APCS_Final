@@ -1,0 +1,94 @@
+package nethackPackage;
+
+/**
+ * Purpose: This is where spells are made
+ * @author Isaac Pugh
+ * @dateCreated April 8, 2015
+ * @dateModified April 8, 2015
+ */
+public class Spell {
+	
+	private int damage;
+	private int range;
+	private int pointCost;
+	private int DC;
+	private String[] statusEffect;
+	private String element;
+	
+	/**
+	 * Parameterized Constructor
+	 * @param damage is an int that holds the amount of damage the Potion can deal.
+	 * @param range is an int that shows how far a Spell's effect affects.
+	 * @param pointCost is an int that shows the pointCost of a Spell.
+	 * @param DC is Something.
+	 * @param statusEffect is an array of String that has the current status effect.
+	 * @param element is a String that defines the element that the Spell is made of.
+	 */
+	public Spell(int damage, int range, int pointCost, int DC, String[] statusEffect, 
+			String element) {
+		this.damage = damage;
+		this.range = range;
+		this.pointCost = pointCost;
+		this.DC = DC;
+		this.statusEffect = statusEffect;
+		this.element = element;
+	}
+	
+	/**
+	 * Unparameterized Constructor
+	 */
+	public Spell() {
+		
+	}
+	
+	/**
+	 * Getters and Setters
+	 */
+	public int getDamage() {
+		return damage;
+	}
+
+	public void setDamage(int damage) {
+		this.damage = damage;
+	}
+
+	public int getRange() {
+		return range;
+	}
+
+	public void setRange(int range) {
+		this.range = range;
+	}
+
+	public int getPointCost() {
+		return pointCost;
+	}
+
+	public void setPointCost(int pointCost) {
+		this.pointCost = pointCost;
+	}
+
+	public int getDC() {
+		return DC;
+	}
+
+	public void setDC(int dC) {
+		DC = dC;
+	}
+
+	public String[] getStatusEffect() {
+		return statusEffect;
+	}
+
+	public void setStatusEffect(String[] statusEffect) {
+		this.statusEffect = statusEffect;
+	}
+
+	public String getElement() {
+		return element;
+	}
+
+	public void setElement(String element) {
+		this.element = element;
+	}
+}

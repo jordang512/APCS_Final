@@ -6,7 +6,7 @@ import java.util.*;
  * Purpose: This class has the attributes for any Entity.
  * @author Isaac Pugh
  * @dateCreated April 7, 2015
- * @dateModified April 8, 2015
+ * @dateModified April 16, 2015
  */
 public class Entity {
 	
@@ -26,19 +26,19 @@ public class Entity {
 	
 	/**
 	 * Parameterized Constructor
-	 * @param entityRace
-	 * @param entityClass
-	 * @param hitPoints
-	 * @param manaPoints
-	 * @param attackPower
-	 * @param meleeAccuracy
-	 * @param rangedAccuracy
-	 * @param strength
-	 * @param experiencePoints
-	 * @param level
-	 * @param spellbook
-	 * @param inventory
-	 * @param statusEffects
+	 * @param entityRace is a String that is an entity's race.
+	 * @param entityClass is a String that is an entity's class.
+	 * @param hitPoints is an int that shows how much damage an entity can take before dying.
+	 * @param manaPoints is an int that shows how much more mana an entity has.
+	 * @param attackPower is an int that shows how good/powerful an entity is at attacking.
+	 * @param meleeAccuracy is an int that shows how accurate an entity is at fighting with a handheld weapon.
+	 * @param rangedAccuracy is an int that shows how accurate an entity is at fighting with a ranged weapon.
+	 * @param strength is an int that is an entity's strength.
+	 * @param experiencePoints is an int that contains the experience gained from different tasks.
+	 * @param level is an int which represents experiencePoints and gives bonuses.
+	 * @param spellbook is a Spellbook which holds an entity's spells.
+	 * @param inventory is an Inventory which holds an entity's items.
+	 * @param statusEffects is an ArrayList of StatusEffect which holds the temporary bonuses of an entity.
 	 */
 	public Entity(String entityRace, String entityClass, int hitPoints, int manaPoints, int attackPower,
 			int meleeAccuracy, int rangedAccuracy, int strength, int experiencePoints, int level,
@@ -62,7 +62,8 @@ public class Entity {
 	 * Unparameterized Constructor
 	 */
 	public Entity() {
-		
+		inventory = new Inventory();
+		spellbook = new Spellbook();
 	}
 
 	/**

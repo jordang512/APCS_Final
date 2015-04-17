@@ -4,7 +4,7 @@ package nethackPackage;
  * Purpose: This is where spells are made
  * @author Isaac Pugh
  * @dateCreated April 8, 2015
- * @dateModified April 8, 2015
+ * @dateModified April 16, 2015
  */
 public class Spell {
 	
@@ -17,12 +17,12 @@ public class Spell {
 	
 	/**
 	 * Parameterized Constructor
-	 * @param damage
-	 * @param range
-	 * @param pointCost
-	 * @param DC
-	 * @param statusEffect
-	 * @param element
+	 * @param damage is an int that holds the amount of damage the Potion can deal.
+	 * @param range is an int that shows how far a Spell's effect affects.
+	 * @param pointCost is an int that shows the pointCost of a Spell.
+	 * @param DC is Something.
+	 * @param statusEffect is an array of String that has the current status effect.
+	 * @param element is a String that defines the element that the Spell is made of.
 	 */
 	public Spell(int damage, int range, int pointCost, int DC, String[] statusEffect, 
 			String element) {
@@ -41,6 +41,9 @@ public class Spell {
 		
 	}
 	
+	/**
+	 * Getters and Setters
+	 */
 	public int getDamage() {
 		return damage;
 	}

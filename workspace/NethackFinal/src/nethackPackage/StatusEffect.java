@@ -4,7 +4,7 @@ package nethackPackage;
  * Purpose: This class can create status effects.
  * @author Isaac Pugh
  * @dateCreated April 13, 2015
- * @dateModified April 13, 2015
+ * @dateModified April 16, 2015
  */
 public class StatusEffect {
 	
@@ -13,8 +13,8 @@ public class StatusEffect {
 	
 	/**
 	 * Parameterized Constructor
-	 * @param effect
-	 * @param duration
+	 * @param effect is a String that describes the effect the effect causes.
+	 * @param duration is an int that describes how many turns the effect will last.
 	 */
 	public StatusEffect(String effect, int duration) {
 		this.effect = effect;
@@ -28,6 +28,9 @@ public class StatusEffect {
 		
 	}
 
+	/**
+	 * Getters and Setters
+	 */
 	public String getEffect() {
 		return effect;
 	}

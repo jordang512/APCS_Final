@@ -4,15 +4,15 @@ package nethackPackage;
  * Purpose: This class can create gloves.
  * @author Isaac Pugh
  * @dateCreated April 8, 2015
- * @dateModified April 8, 2015
+ * @dateModified April 16, 2015
  */
 public class Gloves extends Armor {
 	
 	/**
 	 * Parameterized Constructor
-	 * @param itemName
-	 * @param weight
-	 * @param defense
+	 * @param itemName is a String that holds the name of the Gloves.
+	 * @param weight is a double that holds the weight of the Gloves.
+	 * @param defense is an int that shows how much the Gloves defend from attacks.
 	 */
 	public Gloves(String itemName, double weight, int defense) {
 		super(itemName, weight, defense);

@@ -6,7 +6,7 @@ import java.util.*;
  * Purpose: Stores spells in ArrayList that is an entity's spellbook
  * @author Isaac Pugh
  * @dateCreated April 8, 2015
- * @dateModified April 8, 2015
+ * @dateModified April 16, 2015
  */
 public class Spellbook {
 	
@@ -14,7 +14,7 @@ public class Spellbook {
 	
 	/**
 	 * Parameterized Constructor
-	 * @param spellbook
+	 * @param spellbook is an ArrayList of Spell that holds the spells a player currently has/can use.
 	 */
 	Spellbook(ArrayList<Spell> spellbook) {
 		this.spellbook = spellbook;
@@ -24,7 +24,7 @@ public class Spellbook {
 	 * Unparameterized Constructor
 	 */
 	Spellbook() {
-		
+		spellbook = new ArrayList<Spell>();
 	}
 
 	/**
