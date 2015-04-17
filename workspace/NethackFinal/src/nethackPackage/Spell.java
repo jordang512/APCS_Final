@@ -20,7 +20,7 @@ public class Spell {
 	 * @param damage is an int that holds the amount of damage the Potion can deal.
 	 * @param range is an int that shows how far a Spell's effect affects.
 	 * @param pointCost is an int that shows the pointCost of a Spell.
-	 * @param DC is Something.
+	 * @param DC is an int that measures the ability of a spell to negate resistance.
 	 * @param statusEffect is an array of String that has the current status effect.
 	 * @param element is a String that defines the element that the Spell is made of.
 	 */

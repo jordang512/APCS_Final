@@ -27,6 +27,10 @@ public class Inventory {
 		inventory = new ArrayList<Item>();
 	}
 	
+	/**
+	 * Finds the total weight of the inventory.
+	 * @return the total weight of the items in the inventory.
+	 */
 	public double getTotalWeight() {
 		int totalWeight = 0;
 		for (int i = 0; i < inventory.size(); i++)

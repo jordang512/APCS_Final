@@ -10,6 +10,7 @@ import java.util.*;
  */
 public class Entity {
 	
+	// Variables
 	private String entityRace;
 	private String entityClass;
 	private int hitPoints;
@@ -20,9 +21,13 @@ public class Entity {
 	private int strength;
 	private int experiencePoints;
 	private int level;
+	private double weight;
 	private Spellbook spellbook;
 	private Inventory inventory;
 	private ArrayList<StatusEffect> statusEffects;
+	
+	// Generated variables
+	private double totalWeight;
 	
 	/**
 	 * Parameterized Constructor
@@ -36,13 +41,14 @@ public class Entity {
 	 * @param strength is an int that is an entity's strength.
 	 * @param experiencePoints is an int that contains the experience gained from different tasks.
 	 * @param level is an int which represents experiencePoints and gives bonuses.
+	 * @param weight is an entity's weight which controls how agile an entity is.
 	 * @param spellbook is a Spellbook which holds an entity's spells.
 	 * @param inventory is an Inventory which holds an entity's items.
 	 * @param statusEffects is an ArrayList of StatusEffect which holds the temporary bonuses of an entity.
 	 */
 	public Entity(String entityRace, String entityClass, int hitPoints, int manaPoints, int attackPower,
 			int meleeAccuracy, int rangedAccuracy, int strength, int experiencePoints, int level,
-			Spellbook spellbook, Inventory inventory, ArrayList<StatusEffect> statusEffects) {
+			double weight, Spellbook spellbook, Inventory inventory, ArrayList<StatusEffect> statusEffects) {
 		this.entityClass = entityClass;
 		this.entityRace = entityRace;
 		this.hitPoints = hitPoints;
@@ -53,6 +59,7 @@ public class Entity {
 		this.strength = strength;
 		this.experiencePoints = experiencePoints;
 		this.level = level;
+		this.weight = weight;
 		this.spellbook = spellbook;
 		this.inventory = inventory;
 		this.statusEffects = statusEffects;
@@ -66,6 +73,13 @@ public class Entity {
 		spellbook = new Spellbook();
 	}
 
+	/**
+	 * Finds the total weight of the inventory plus the entity.
+	 */
+	public void findTotalWeight() {
+		totalWeight = inventory.getTotalWeight() + weight;
+	}
+	
 	/**
 	 * Getters and Setters
 	 */
@@ -171,5 +185,21 @@ public class Entity {
 
 	public void setStatusEffects(ArrayList<StatusEffect> statusEffects) {
 		this.statusEffects = statusEffects;
+	}
+
+	public double getWeight() {
+		return weight;
+	}
+
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+
+	public double getTotalWeight() {
+		return totalWeight;
+	}
+
+	public void setTotalWeight(double totalWeight) {
+		this.totalWeight = totalWeight;
 	}
 }
